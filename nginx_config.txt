@@ -1,0 +1,60 @@
+# ------------------------------------------------------------------
+# Fichier de configuration Nginx personnalisé pour kiwinetwork.loc
+#
+# À PLACER DANS : devilbox/cfg/vhosts-custom/kiwinetwork.loc.conf
+# ------------------------------------------------------------------
+
+server {
+    # --- VHOST ---
+    listen 80;
+    listen 443 ssl http2;
+    server_name kiwinetwork.loc;
+
+    # --- SSL ---
+    # Ces chemins sont gérés automatiquement par Devilbox
+    ssl_certificate           /etc/ssl/certs/devilbox-ca.crt;
+    ssl_certificate_key       /etc/ssl/private/devilbox-ca.key;
+    ssl_protocols             TLSv1.2 TLSv1.3;
+    ssl_ciphers               "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
+    ssl_prefer_server_ciphers on;
+
+    # --- LOGS ---
+    # Ces chemins sont gérés automatiquement par Devilbox
+    access_log   /var/log/nginx/kiwinetwork.loc.access.log combined;
+    error_log    /var/log/nginx/kiwinetwork.loc.error.log warn;
+
+    # --- DOCROOT ---
+    # Le chemin doit pointer vers votre dossier /public
+    root         "/shared/httpd/kiwinetwork/www/public";
+    index        index.php;
+
+
+    # ------------------------------------------------------------------
+    # --- LA CORRECTION EST ICI ---
+    # ------------------------------------------------------------------
+    location / {
+        # Au lieu de /index.php$is_args$args, on utilise :
+        try_files $uri $uri/ /index.php?url=$uri&$args;
+    }
+    # ------------------------------------------------------------------
+
+
+    # --- PHP-FPM ---
+    location ~ \.php?$ {
+        try_files $uri =404;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_split_path_info ^(.+\.php)(.*)$;
+
+        # Le nom du conteneur PHP de Devilbox est 'php' sur le port 9000
+        fastcgi_pass php:9000;
+        fastcgi_read_timeout 180;
+        fastcgi_index index.php;
+    }
+
+    # --- DENY ---
+    # Bloque l'accès aux fichiers .htaccess
+    location ~ /\.ht {
+        deny all;
+    }
+}

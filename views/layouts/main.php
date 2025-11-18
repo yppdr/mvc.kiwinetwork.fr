@@ -1,3 +1,4 @@
+<?php use App\Core\FlashMessage; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,6 +24,9 @@
     </header>
 
     <main>
+        <div class="container">
+            <?php FlashMessage::display(); ?>
+        </div>
         <?php
         // C'est ici que le contenu de nos vues sera injecté
         echo $content ?? '';

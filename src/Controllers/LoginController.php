@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Core\FlashMessage;
 use App\Models\User;
 
 class LoginController extends Controller
@@ -12,6 +13,11 @@ class LoginController extends Controller
      */
     public function index(): void
     {
+        // Si l'utilisateur est déjà connecté, on le redirige vers l'admin
+        if (isset($_SESSION['user_id'])) {
+            header('Location: ' . BASE_URL . 'admin');
+            exit;
+        }
         $this->render('login/index', ['title' => 'Connexion']);
     }
 
@@ -23,20 +29,19 @@ class LoginController extends Controller
         $email = $_POST['email'] ?? '';
         $password = $_POST['password'] ?? '';
 
-
         $userModel = new User();
         $user = $userModel->findByEmail($email);
 
-                // Si l'utilisateur existe et que le mot de passe est correct
-                if ($user && password_verify($password, $user->password)) {
-                    // La session est déjà démarrée dans public/index.php
-                    $_SESSION['user_id'] = $user->id;
-                    
-                    // On redirige vers l'administration
-                    header('Location: ' . BASE_URL . 'admin');
-                    exit;
-                }
-        // Sinon, on redirige vers la page de connexion (avec un message d'erreur bientôt)
+        // Si l'utilisateur existe et que le mot de passe est correct
+        if ($user && password_verify($password, $user->password)) {
+            $_SESSION['user_id'] = $user->id;
+            FlashMessage::set('Connexion réussie. Bienvenue !');
+            
+            header('Location: ' . BASE_URL . 'admin');
+            exit;
+        }
+        
+        FlashMessage::set('Email ou mot de passe incorrect.', 'error');
         header('Location: ' . BASE_URL . 'login');
         exit;
     }
@@ -47,7 +52,10 @@ class LoginController extends Controller
     public function logout(): void
     {
         session_destroy();
-        header('Location: ' . BASE_URL . 'login');
+        // On redémarre une session pour pouvoir stocker le message flash
+        session_start();
+        FlashMessage::set('Vous avez été déconnecté avec succès.');
+        header('Location: ' . BASE_URL);
         exit;
     }
 }

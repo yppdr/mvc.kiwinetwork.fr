@@ -45,6 +45,7 @@ class AdminController extends Controller
     public function store(): void
     {
         $title = $_POST['title'] ?? '';
+        $img = $_POST['img'] ?? '';
         $content = $_POST['content'] ?? '';
 
         // Validation simple
@@ -59,6 +60,7 @@ class AdminController extends Controller
             'title' => $title,
             'slug' => $this->slugify($title),
             'content' => $content,
+            'img' => $img,
         ]);
 
         // Redirection vers la liste des articles
@@ -97,6 +99,7 @@ class AdminController extends Controller
         $id = (int)($params['id'] ?? 0);
         $title = $_POST['title'] ?? '';
         $content = $_POST['content'] ?? '';
+        $img = $_POST['img'] ?? '';
 
         if (empty($title) || empty($content) || $id === 0) {
             // Gérer l'erreur
@@ -109,6 +112,7 @@ class AdminController extends Controller
             'title' => $title,
             'slug' => $this->slugify($title),
             'content' => $content,
+            'img' => $img,
         ]);
 
         header('Location: ' . BASE_URL . 'admin');

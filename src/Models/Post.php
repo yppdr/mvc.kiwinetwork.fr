@@ -56,13 +56,14 @@ class Post
     public function create(array $data): bool
     {
         $stmt = $this->pdo->prepare("
-            INSERT INTO posts (title, slug, content) 
+            INSERT INTO posts (title, slug, content, img)
             VALUES (?, ?, ?)
         ");
         return $stmt->execute([
             $data['title'],
             $data['slug'],
-            $data['content']
+            $data['content'],
+            $data['img']
         ]);
     }
 
@@ -75,14 +76,15 @@ class Post
     public function update(int $id, array $data): bool
     {
         $stmt = $this->pdo->prepare("
-            UPDATE posts 
-            SET title = ?, slug = ?, content = ? 
+            UPDATE posts
+            SET title = ?, slug = ?, content = ?, img = ?
             WHERE id = ?
         ");
         return $stmt->execute([
             $data['title'],
             $data['slug'],
             $data['content'],
+            $data['img'],
             $id
         ]);
     }

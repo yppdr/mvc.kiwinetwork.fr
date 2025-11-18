@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="11cabd6b-2028-4787-a56a-517aca09e74e" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/blog/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/blog/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/blog/show.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/contact.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +102,8 @@
       <workItem from="1763386473300" duration="206000" />
       <workItem from="1763386944830" duration="5734000" />
       <workItem from="1763449226234" duration="1848000" />
-      <workItem from="1763457874774" duration="1422000" />
+      <workItem from="1763457874774" duration="1502000" />
+      <workItem from="1763477289107" duration="1845000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <option name="closed" value="true" />
@@ -139,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763451251948</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update">
+      <option name="closed" value="true" />
+      <created>1763459359288</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763459359288</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

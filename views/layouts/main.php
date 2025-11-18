@@ -37,7 +37,7 @@
         <a href="<?= BASE_URL ?>" class="logo"><img src="<?= BASE_URL ?>assets/img/logo.svg" alt="KiwiNetwork Logo"></a>
         <nav class="main-nav">
             <ul>
-                <li><a href="<?= BASE_URL ?>" class="active">Accueil</a></li>
+                <li><a href="<?= BASE_URL ?>">Accueil</a></li>
                 <li><a href="<?= BASE_URL ?>blog">Blog</a></li>
                 <li><a href="status.html">Status</a></li>
                 <li><a href="<?= BASE_URL ?>contact">Contact</a></li>

@@ -18,7 +18,7 @@
 
                 <article class="post-item">
                     <div class="post-thumbnail">
-                        <a href="<?= BASE_URL ?>"><img src="<?= BASE_URL ?>assets/img/post-thumbnail.svg" alt="Illustration sur le choix d'un hébergement web"></a>
+                        <a href="<?= BASE_URL ?>"><img src="<?= htmlspecialchars($post->img) ?>" alt="<?= htmlspecialchars($post->title) ?>"></a>
                     </div>
                     <div class="post-content-summary">
                         <h3><a href="<?= BASE_URL ?>blog/<?= htmlspecialchars($post->slug) ?>"><?= htmlspecialchars($post->title) ?></a></h3>

@@ -6,6 +6,10 @@
         <input type="text" id="title" name="title" required style="width: 100%; padding: 8px; font-size: 1em;">
     </div>
     <div style="margin-bottom: 15px;">
+        <label for="img" style="display: block; margin-bottom: 5px;">Lien IMG</label>
+        <input type="text" id="img" name="img" required style="width: 100%; padding: 8px; font-size: 1em;">
+    </div>
+    <div style="margin-bottom: 15px;">
         <label for="content" style="display: block; margin-bottom: 5px;">Contenu</label>
         <textarea id="content" name="content" rows="15" required style="width: 100%; padding: 8px; font-size: 1em; line-height: 1.6;"></textarea>
     </div>

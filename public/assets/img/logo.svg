@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="37.835312mm" height="37.835381mm" viewBox="0 0 37.835312 37.835381" version="1.1" id="svg298" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" sodipodi:docname="dessin.svg" inkscape:export-filename="D:\datas\Téléchargements\dessin.png" inkscape:export-xdpi="96" inkscape:export-ydpi="96" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview id="namedview300" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="true" inkscape:document-units="mm" showgrid="false" inkscape:zoom="2.1165587" inkscape:cx="-42.758087" inkscape:cy="112.68291" inkscape:window-width="1920" inkscape:window-height="1025" inkscape:window-x="1912" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer1"/>
+  <defs id="defs295">
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath22-4">
+      <path d="M 133.73,151.75 H 240.98 V 259 H 133.73 Z" id="path20-5"/>
+    </clipPath>
+  </defs>
+  <g inkscape:groupmode="layer" id="layer1" inkscape:label="BASE">
+    <g inkscape:label="BUT" inkscape:groupmode="layer" id="g3014" style="display:inline" transform="translate(-97.053773,-90.335888)">
+      <g id="g3012" transform="matrix(0.35277777,0,0,-0.35277777,49.876696,181.70533)">
+        <g id="g3010" clip-path="url(#clipPath22-4)">
+          <g id="g3008" transform="translate(196.1523,208.9961)">
+            <path d="m -10.16,-43.141 c -6.078,3.801 -16.641,3.582 -34.156,3.223 -5.36,-0.109 -11.364,-0.23 -18.106,-0.254 v -17.074 h 61.535 c -2.859,7.742 -5.679,11.859 -9.273,14.105" style="fill:#10b981;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3006" sodipodi:nodetypes="cccccc"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g inkscape:label="TOP" inkscape:groupmode="layer" id="g427" style="display:inline" transform="translate(-97.053773,-90.335888)">
+      <g id="g425" transform="matrix(0.35277777,0,0,-0.35277777,49.876696,181.70533)">
+        <g id="g423" clip-path="url(#clipPath22-4)">
+          <g id="g421" transform="translate(196.1523,208.9961)">
+            <path d="M -7.977,50.004 -62.422,5.348 v 44.656 z" style="fill:#10b981;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path419" sodipodi:nodetypes="cccc"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g inkscape:label="MID_G" inkscape:groupmode="layer" id="g1767" style="display:inline;mix-blend-mode:normal" transform="translate(-97.053773,-90.335888)">
+      <g id="g1765" transform="matrix(0.35277777,0,0,-0.35277777,49.876696,181.70533)">
+        <g id="g1763" clip-path="url(#clipPath22-4)">
+          <g id="g1761" transform="translate(196.1523,208.9961)">
+            <path d="M -15.957,-10.648 H -34.609 L 43.926,50.004 H 12.098 l -74.52,-61.117 v -16.332 c 6.617,0.023 12.551,0.144 17.848,0.254 19.879,0.414 31.875,0.652 41.164,-5.153 7.527,-4.715 12.035,-12.695 15.992,-24.902 h 19.281 c -3.957,27.941 -22.515,46.598 -47.82,46.598" style="fill:#10b981;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path1759" sodipodi:nodetypes="ccccccccccc"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g inkscape:label="MID_D" inkscape:groupmode="layer" id="g2423" style="display:inline" transform="translate(-97.053773,-90.335888)">
+      <g id="g2421" transform="matrix(0.35277777,0,0,-0.35277777,49.876696,181.70533)">
+        <g id="g2419" clip-path="url(#clipPath22-4)">
+          <g id="g2417" transform="translate(196.1523,208.9961)">
+            <path d="m 0,0 c 3.207,-0.871 6.316,-2.02 9.324,-3.438 7.473,-3.535 14.035,-8.66 19.512,-15.214 5.332,-6.391 9.469,-13.961 12.293,-22.493 1.726,-5.25 2.918,-10.617 3.574,-16.101 h 0.137 v 91.867 z" style="fill:#10b981;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2415" sodipodi:nodetypes="cccccccc"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

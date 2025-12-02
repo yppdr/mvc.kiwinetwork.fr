@@ -23,7 +23,8 @@
                     <div class="post-content-summary">
                         <h3><a href="<?= BASE_URL ?>blog/<?= htmlspecialchars($post->slug) ?>"><?= htmlspecialchars($post->title) ?></a></h3>
                         <p class="post-meta">Publié le <?= date('d/m/Y', strtotime($post->created_at)) ?></p>
-                        <p><?= nl2br(htmlspecialchars(substr($post->content, 0, 200))) ?>...</p>
+
+                        <p><?= nl2br(substr($post->content, 0, 100)) ?>...</p>
                     </div>
                 </article>
                     <?php endforeach; ?>

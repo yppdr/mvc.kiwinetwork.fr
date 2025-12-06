@@ -1,3 +1,8 @@
+<main>
+    <section class="section">
+        <div class="container">
+            <div class="legal-content">
+
 <h2>Administration des articles</h2>
 
 <a href="<?= BASE_URL ?>admin/posts/create" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px;">
@@ -26,3 +31,8 @@
         <?php endforeach; ?>
     </tbody>
 </table>
+
+            </div>
+        </div>
+    </section>
+</main>

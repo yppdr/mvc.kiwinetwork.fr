@@ -44,9 +44,8 @@
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li><a href="<?= BASE_URL ?>admin">Admin</a></li>
                     <li><a href="<?= BASE_URL ?>logout">Déconnexion</a></li>
-                <?php else: ?>
-                    <li><a href="<?= BASE_URL ?>admin">Admin</a></li>
                 <?php endif; ?>
+
 
             </ul>
         </nav>
@@ -66,7 +65,7 @@
 <footer class="main-footer">
     <div class="container">
         <p>&copy; <span id="copyright-year"><?= date('Y') ?></span> KiwiNetwork. Tous droits réservés.</p>
-        <p><a href="<?= BASE_URL ?>mentions-legales.html">Mentions Légales</a></p>
+        <p><a href="<?= BASE_URL ?>legal">Mentions Légales</a></p>
     </div>
 </footer>
 

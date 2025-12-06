@@ -12,7 +12,7 @@ class PageController extends Controller
     public function home(): void
     {
         $this->render('home', [
-            'title' => 'Accueil - Blog MVC'
+            'title' => 'Accueil - KiwiNetwork'
         ]);
     }
 
@@ -50,12 +50,24 @@ class PageController extends Controller
             }
 
             if (empty($data['errors'])) {
-                // Ici, vous pourriez envoyer un email, sauvegarder en base de données, etc.
-                // Pour l'instant, nous affichons juste un succès.
+
+                // Setup send email ici
+
                 $data['success'] = true;
             }
         }
 
         $this->render('contact', $data);
     }
+
+    /**
+     * Affiche la page de mentions légales
+     */
+    public function legal(): void
+    {
+        $this->render('legal', [
+            'title' => 'Mentions légales - KiwiNetwork'
+        ]);
+    }
+
 }

@@ -1,3 +1,8 @@
+<main>
+    <section class="section">
+        <div class="container">
+            <div class="legal-content">
+
 <h2>Créer un nouvel article</h2>
 
 <form action="<?= BASE_URL ?>admin/posts/store" method="POST">
@@ -25,3 +30,7 @@
     toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
   });
 </script>
+            </div>
+        </div>
+    </section>
+</main>

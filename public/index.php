@@ -45,6 +45,7 @@ $router = new App\Core\Router();
 // --- Définition des routes ---
 // add(URI, Controller, Méthode)
 $router->add('', 'PageController', 'home');
+$router->add('legal', 'PageController', 'legal');
 $router->add('contact', 'PageController', 'contact');
 $router->add('blog', 'BlogController', 'index');
 $router->add('blog/{slug}', 'BlogController', 'show');

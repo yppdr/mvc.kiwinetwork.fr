@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 
+define('CONTACT_EMAIL', 'site@kiwinetwork.fr');
+
 class PageController extends Controller
 {
     /**
@@ -51,7 +53,22 @@ class PageController extends Controller
 
             if (empty($data['errors'])) {
 
-                // Setup send email ici
+                $to = CONTACT_EMAIL;
+                $email_subject = "Nouveau message de contact : " . $subject;
+                $email_body = "Vous avez reçu un nouveau message de contact.\n\n" .
+                              "Nom: " . $name . "\n" .
+                              "Email: " . $email . "\n" .
+                              "Sujet: " . $subject . "\n\n" .
+                              "Message:\n" . $message;
+                $headers = "From: site@kiwinetwork.fr\r\n" .
+                           "Reply-To: " . $email . "\r\n" .
+                           "X-Mailer: PHP/" . phpversion();
+
+                if (mail($to, $email_subject, $email_body, $headers)) {
+                    $data['success'] = true;
+                } else {
+                    $data['errors'][] = 'Une erreur est survenue lors de l\'envoi de votre message.';
+                }
 
                 $data['success'] = true;
             }
